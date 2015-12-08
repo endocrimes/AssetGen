@@ -4,6 +4,8 @@ AssetGen automatically creates structs and enums for your Asset Catalogs.
 
 It supports multiple catalogs and folders inside them.
 
+## Usage
+
 Usage: `$ /path/to/AssetGen [--input /path/to/project/root] [--output /path/to/Assets.swift]`
 
 You get something like this:
@@ -41,3 +43,20 @@ That can then be used like this:
 let myImage: UIImage = ImageResources.MyAssetCatalog.SomeAsset.image
 ```
 
+## Building
+
+To build AssetGen, you need [Swift](http://swift.org), and it's Package Manager installed.
+
+When you have those, it can be built with:
+
+`$ swift build`
+
+And ran from within the .build directory.
+
+## Installation
+
+```
+$ git clone https://github.com/endocrimes/AssetGen.git
+$ swift build --configuration release
+$ sudo cp .build/release/AssetGen /usr/local/bin/AssetGen
+```
