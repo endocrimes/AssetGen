@@ -1,0 +1,29 @@
+client:
+  name: swift-build
+
+tools: {}
+
+targets:
+  "": [<PathKit>]
+  PathKit: [<PathKit>]
+
+commands:
+  <PathKit-swiftc>:
+    tool: swift-compiler
+    executable: "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/bin/swiftc"
+    inputs: ["/Users/daniel/Development/Personal/AssetGen/Packages/PathKit-0.6.0/Sources/PathKit.swift"]
+    outputs: ["<PathKit-swiftc>","/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.swiftmodule","/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/Sources/PathKit.swift.o"]
+    module-name: "PathKit"
+    module-output-path: "/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.swiftmodule"
+    is-library: true
+    sources: ["/Users/daniel/Development/Personal/AssetGen/Packages/PathKit-0.6.0/Sources/PathKit.swift"]
+    objects: ["/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/Sources/PathKit.swift.o"]
+    import-paths: ["/Users/daniel/Development/Personal/AssetGen/.build/debug"]
+    temps-path: "/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/PathKit"
+    other-args: ["-j8","-Onone","-g","-target","x86_64-apple-macosx10.10","-enable-testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-I","/usr/local/include"]
+  <PathKit>:
+    tool: shell
+    inputs: ["<PathKit-swiftc>","/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/Sources/PathKit.swift.o"]
+    outputs: ["<PathKit>","/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.a"]
+    args: ["/bin/sh","-c","rm -f '/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.a'; ar cr '/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.a' '/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/Sources/PathKit.swift.o'"]
+    description: "Linking Library:  .build/debug/PathKit.a"

@@ -1,0 +1,8 @@
+version: "Apple Swift version 2.2-dev (LLVM 46be9ff861, Clang 4deb154edc, Swift 778f82939c)"
+options: "cd818c31adec55e4b81ca7cc6a8bcf81"
+build_time: [502919104, 355185000]
+inputs:
+  "/Users/daniel/Development/Personal/AssetGen/Sources/main.swift": [502919074, 0]
+  "/Users/daniel/Development/Personal/AssetGen/Sources/PathKitExtensions.swift": [502918864, 0]
+  "/Users/daniel/Development/Personal/AssetGen/Sources/Titlecase.swift": [502906298, 0]
+  "/Users/daniel/Development/Personal/AssetGen/Sources/XCAssets.swift": [502919100, 0]

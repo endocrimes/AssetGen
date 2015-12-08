@@ -1,0 +1,29 @@
+client:
+  name: swift-build
+
+tools: {}
+
+targets:
+  "": [<AssetGen>]
+  AssetGen: [<AssetGen>]
+
+commands:
+  <AssetGen-swiftc>:
+    tool: swift-compiler
+    executable: "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/bin/swiftc"
+    inputs: ["/Users/daniel/Development/Personal/AssetGen/Sources/main.swift","/Users/daniel/Development/Personal/AssetGen/Sources/PathKitExtensions.swift","/Users/daniel/Development/Personal/AssetGen/Sources/Titlecase.swift","/Users/daniel/Development/Personal/AssetGen/Sources/XCAssets.swift"]
+    outputs: ["<AssetGen-swiftc>","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.swiftmodule","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/main.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/PathKitExtensions.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/Titlecase.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/XCAssets.swift.o"]
+    module-name: "AssetGen"
+    module-output-path: "/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.swiftmodule"
+    is-library: false
+    sources: ["/Users/daniel/Development/Personal/AssetGen/Sources/main.swift","/Users/daniel/Development/Personal/AssetGen/Sources/PathKitExtensions.swift","/Users/daniel/Development/Personal/AssetGen/Sources/Titlecase.swift","/Users/daniel/Development/Personal/AssetGen/Sources/XCAssets.swift"]
+    objects: ["/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/main.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/PathKitExtensions.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/Titlecase.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/XCAssets.swift.o"]
+    import-paths: ["/Users/daniel/Development/Personal/AssetGen/.build/debug"]
+    temps-path: "/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/AssetGen"
+    other-args: ["-j8","-Onone","-g","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-I","/usr/local/include"]
+  <AssetGen>:
+    tool: shell
+    inputs: ["<AssetGen-swiftc>","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/main.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/PathKitExtensions.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/Titlecase.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/XCAssets.swift.o"]
+    outputs: ["<AssetGen>","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen"]
+    args: ["/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/bin/swiftc","-o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/main.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/PathKitExtensions.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/Titlecase.swift.o","/Users/daniel/Development/Personal/AssetGen/.build/debug/AssetGen.o/Sources/XCAssets.swift.o","-Xlinker","-all_load","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-Xlinker","/Users/daniel/Development/Personal/AssetGen/.build/debug/Commander.a","-Xlinker","/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.a","-L/usr/local/lib"]
+    description: "Linking Executable:  .build/debug/AssetGen"
