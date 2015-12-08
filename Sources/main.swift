@@ -9,7 +9,6 @@ func discoverXcassetsInDirectory(path: String) -> [Path] {
 }
 
 func assetsInCatalog(path: Path) -> XCAssets {
-	// FIXME: Load subfolders as their own enums
 	let children = try! path.children()
 	let imagesets = children.filterByExtension("imageset")
 
