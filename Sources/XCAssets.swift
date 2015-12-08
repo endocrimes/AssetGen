@@ -7,7 +7,7 @@ struct XCAssets {
 		let subsources = subfolders?.flatMap({ $0.source }) ?? []
 
 		var sourceArray = [
-			"enum \(name): String, AssetProtocol {"
+			"enum \(name): String, AssetGenImageProtocol {"
 		]
 		for (key, value) in cases {
 			sourceArray.append("case \(key) = \"\(value)\"")
