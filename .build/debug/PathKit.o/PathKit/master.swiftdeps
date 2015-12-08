@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.2-dev (LLVM 46be9ff861, Clang 4deb154edc, Swift 778f82939c)"
+options: "cdd15b92652bc7b6664bf1e9763b6159"
+build_time: [502918950, 522374000]
+inputs:
+  "/Users/daniel/Development/Personal/AssetGen/Packages/PathKit-0.6.0/Sources/PathKit.swift": [502894150, 0]

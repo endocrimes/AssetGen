@@ -1,0 +1,33 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CommandType"
+provides-nominal:
+- "P9Commander11CommandType"
+provides-member:
+- ["P9Commander11CommandType", ""]
+- ["P9Commander11CommandType", "run"]
+provides-dynamic-lookup:
+depends-top-level:
+- "ArgumentParser"
+- "CommandType"
+- "String"
+depends-member:
+- !private ["Ps9AnyObject", "init"]
+- !private ["P9Commander19ArgumentConvertible", "init"]
+- !private ["C9Commander14ArgumentParser", "deinit"]
+- !private ["C9Commander14ArgumentParser", "init"]
+- ["P9Commander11CommandType", "ArgumentParser"]
+- ["P9Commander11CommandType", "String"]
+- ["P9Commander11CommandType", "run"]
+- !private ["Ps23CustomStringConvertible", "init"]
+depends-nominal:
+- !private "Ps9AnyObject"
+- !private "P9Commander19ArgumentConvertible"
+- !private "C9Commander14ArgumentParser"
+- "P9Commander11CommandType"
+- !private "Ps23CustomStringConvertible"
+depends-dynamic-lookup:
+depends-external:
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+interface-hash: "df27a97e983c2422e7cf9bdf5505bc4d"

@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/PathKit/master.swiftdeps"
+  },
+  "/Users/daniel/Development/Personal/AssetGen/Packages/PathKit-0.6.0/Sources/PathKit.swift": {
+    "dependencies": "/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/PathKit/PathKit.d",
+    "object": "/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/Sources/PathKit.swift.o",
+    "swiftmodule": "/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/PathKit/PathKit~partial.swiftmodule",
+    "swift-dependencies": "/Users/daniel/Development/Personal/AssetGen/.build/debug/PathKit.o/PathKit/PathKit.swiftdeps"
+  }
+}
